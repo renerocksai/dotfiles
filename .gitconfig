@@ -1,0 +1,12 @@
+[user]
+	name = Rene Schallner
+	email = rene@rocks.ai
+[alias]
+        lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+        st = status
+[core]
+        pager = less -MIFRX
+	editor = vim
+[color]
+        ui = true
+
