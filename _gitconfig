@@ -6,9 +6,10 @@
     st = status -uno
     fix = "!f() { vim -p +/HEAD $(git diff --relative --name-only | uniq); }; f"
     conflicts = diff --name-only --diff-filter=U
+    vim = "!f() { nvim +'Gina status';};f"
 [core]
     pager = less -MIFRX
-	editor = vim
+	editor = nvim
 [color]
         ui = true
 [push]
