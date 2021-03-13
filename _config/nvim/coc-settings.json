@@ -1,0 +1,13 @@
+{
+"languageserver": {
+    "godot": {
+      "host": "127.0.0.1",
+      "filetypes": ["gd", "gdscript"],
+      "port": 6008
+    },
+    "zls" : {
+      "command": "$(HOME)/bin/zls",
+      "filetypes": ["zig"]
+    }
+  }
+}
