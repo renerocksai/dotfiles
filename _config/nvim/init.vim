@@ -200,7 +200,6 @@ set guifont=Consolas
 " vim RC editing
 nnoremap <leader>E :vsplit $MYVIMRC<CR>
 nnoremap <leader>S :source $MYVIMRC<CR>
-inoremap aa <esc>
 inoremap jk <esc>
 
 """""""""""""""""""""""""""""""""""""""
@@ -363,7 +362,7 @@ nmap <right> <nop>
 
 "set relativenumber
 
-"set number
+set number
 set hlsearch
 hi Search ctermfg=192 ctermbg=199
 
