@@ -1,12 +1,16 @@
 [user]
+	email = rene.schallner@nim.org
 	name = Rene Schallner
-	email = rene@rocks.ai
 [alias]
-        lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-        st = status
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    st = status -uno
+    fix = "!f() { vim -p +/HEAD $(git diff --relative --name-only | uniq); }; f"
+    conflicts = diff --name-only --diff-filter=U
 [core]
-        pager = less -MIFRX
+    pager = less -MIFRX
 	editor = vim
 [color]
         ui = true
+[push]
+	default = matching
 
