@@ -121,6 +121,8 @@ let mapleader = ","
 set autowrite
 map <C-n> :cnext<CR>
 map <C-b> :cprevious<CR>
+map <leader>b :make<CR>
+map <C-c> :copen<CR>
 nnoremap <leader>c :cclose<CR>
 autocmd FileType go nmap <leader>b  <Plug>(go-build)
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
