@@ -48,6 +48,7 @@ Plugin 'roxma/vim-tmux-clipboard'
 Plugin 'habamax/vim-godot'
 Plugin 'ziglang/zig.vim'
 Plugin 'eemed/sitruuna.vim'
+
 "Firenvim
 "Plugin 'glacambre/firenvim'
 
