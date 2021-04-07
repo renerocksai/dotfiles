@@ -43,7 +43,8 @@ floating_modifier $mod
 
 # start a terminal
 # rene bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec alacritty
+# nono bindsym $mod+Return exec /home/rs/.cargo/bin/alacritty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -54,6 +55,8 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+bindsym Shift+Control+space exec $HOME/bin/SWITCH_KB_LAYOUT.sh
 
 # change focus
 bindsym $mod+h focus left
@@ -187,3 +190,4 @@ bindsym --release $mod+Print exec shutter -s
 # since win+l is used, take win+ctrl+l for lock
 bindsym --release $mod+control+l exec i3lock -e -c 000000
 
+for_window [title="Slides"] floating enable
