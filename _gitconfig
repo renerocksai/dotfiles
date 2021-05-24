@@ -1,5 +1,5 @@
 [user]
-	email = rene.schallner@nim.org
+	email = rene@rocks.ai
 	name = Rene Schallner
 [alias]
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
@@ -7,6 +7,7 @@
     fix = "!f() { vim -p +/HEAD $(git diff --relative --name-only | uniq); }; f"
     conflicts = diff --name-only --diff-filter=U
     vim = "!f() { nvim +'Gina status';};f"
+
 [core]
     pager = less -MIFRX
 	editor = nvim

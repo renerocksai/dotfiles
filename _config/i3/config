@@ -10,7 +10,9 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 # rene: use windows key as mod
-set $mod Mod4
+#       set $mod Mod4
+# rene: use Alt as modifier, for better Kinesis compatibility
+set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -160,10 +162,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -186,7 +188,10 @@ bar {
 }
 
 # rene
-bindsym --release $mod+Print exec shutter -s
+# does not seem to work: bindsym --release $mod+Print exec /usr/bin/flameshot gui
+bindsym --release $mod+p exec /usr/bin/flameshot gui
+bindsym --release $mod+Shift+p exec /usr/bin/flameshot full -p ~/Pictures/
+
 # since win+l is used, take win+ctrl+l for lock
 bindsym --release $mod+control+l exec i3lock -e -c 000000
 

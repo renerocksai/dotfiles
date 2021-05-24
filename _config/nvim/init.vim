@@ -19,13 +19,15 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'machakann/vim-highlightedyank'
 Plugin 'tomasiser/vim-code-dark'
+Plugin 'gruvbox-community/gruvbox'
+Plugin 'flazz/vim-colorschemes'
 "Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'Tagbar'
 Plugin 'qpkorr/vim-bufkill'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plugin 'junegunn/fzf.vim'
+"Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plugin 'junegunn/fzf.vim'
 
 Plugin 'fatih/vim-go'
 Plugin 'jremmen/vim-ripgrep'
@@ -36,6 +38,8 @@ Plugin 'dart-lang/dart-vim-plugin'
 " we replace it by coc Plugin 'natebosch/vim-lsc'
 " we replace it by coc  Plugin 'natebosch/vim-lsc-dart'
 Plugin 'neoclide/coc.nvim'
+Plugin 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
+
 
 " tmux integration
 Plugin 'benmills/vimux'
@@ -48,6 +52,11 @@ Plugin 'roxma/vim-tmux-clipboard'
 Plugin 'habamax/vim-godot'
 Plugin 'ziglang/zig.vim'
 Plugin 'eemed/sitruuna.vim'
+
+" Telescope
+Plugin 'nvim-lua/popup.nvim'
+Plugin 'nvim-lua/plenary.nvim'
+Plugin 'nvim-telescope/telescope.nvim'
 
 "Firenvim
 "Plugin 'glacambre/firenvim'
@@ -84,10 +93,20 @@ autocmd FileType pov set syntax=rrisc
 autocmd FileType asm set syntax=rrisc 
 
 """"""""""""""""""""""""""""""""""""""""""
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+:nnoremap <C-j> <C-W>j
+:nnoremap <C-k> <C-W>k
+:nnoremap <C-h> <C-W>h
+:nnoremap <C-l> <C-W>l
+
+:inoremap <C-j> <C-\><C-n><C-W>j
+:inoremap <C-k> <C-\><C-n><C-W>k
+:inoremap <C-h> <C-\><C-n><C-W>h
+:inoremap <C-l> <C-\><C-n><C-W>l
+
+:tnoremap <C-j> <C-\><C-n><C-W>j
+:tnoremap <C-k> <C-\><C-n><C-W>k
+:tnoremap <C-h> <C-\><C-n><C-W>h
+:tnoremap <C-l> <C-\><C-n><C-W>l
 """"""""""""""""""""""""""""""""""""""""""
 set mouse=a
 
@@ -107,8 +126,9 @@ if &term =~ '256color'
     set t_ut=
 endif
 
-let g:airline_theme='coderene'
-:colorscheme codedark
+"let g:airline_theme='coderene'
+":colorscheme codedark
+:colorscheme gruvbox
 
 command Term :term ++curwin
 command Vterm :vertical term
@@ -203,6 +223,7 @@ set guifont=Consolas
 " vim RC editing
 nnoremap <leader>E :vsplit $MYVIMRC<CR>
 nnoremap <leader>S :source $MYVIMRC<CR>
+inoremap aa <esc>
 inoremap jk <esc>
 
 """""""""""""""""""""""""""""""""""""""
@@ -365,7 +386,7 @@ nmap <right> <nop>
 
 "set relativenumber
 
-set number
+"set number
 set hlsearch
 hi Search ctermfg=192 ctermbg=199
 
@@ -373,4 +394,15 @@ hi Search ctermfg=192 ctermbg=199
 command! BufOnly silent! execute "%bd|e#|bd#"
 
 :set exrc
+
+:tnoremap <leader><Esc> <C-\><C-n>
+
+":set colorcolumn=120
+
+"Telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <C-p> <cmd>Telescope find_files<cr>
 

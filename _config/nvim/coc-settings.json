@@ -6,8 +6,9 @@
       "port": 6008
     },
     "zls" : {
-      "command": "$(HOME)/bin/zls",
+      "command": "/home/rs/zigsperiments/zls/zig-cache/bin/zls",
       "filetypes": ["zig"]
     }
-  }
+  },
+  "clangd.path": "/home/rs/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd"
 }
