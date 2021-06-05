@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Zotero
-Exec=bash -c "/home/renemann/Zotero/zotero -url %U"
-Icon=/home/renemann/Zotero/chrome/icons/default/default256.png
+Exec=bash -c "/home/rs/Downloads/Zotero_linux-x86_64/zotero -url %U"
+Icon=/home/rs/Downloads/Zotero_linux-x86_64/chrome/icons/default/default256.png
 Type=Application
 Terminal=false
 Categories=Office;
