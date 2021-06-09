@@ -1,3 +1,3 @@
 #!/bin/bash
-setxkbmap -layout us real-programmers-qwerty
+setxkbmap -layout real-prog-qwerty
 
